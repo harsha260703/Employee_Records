@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Register Employee</title></head>
+<body>
+    <h2>Employee Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+    <a href="{% url 'employee_list' %}">View Employee List</a>
+</body>
+</html>
